@@ -1,11 +1,18 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { View } from 'react-native';
 import Botao from './componentes/Botao'
 import Styles from './estilos/Padrao'
+import Display from './componentes/Display'
 
-export default function App() {
+export default class App extends Component {
+  state = {
+    displayValue: '0'
+  }
+
+  render() {
   return (
     <View style={Styles.container}>
+      <Display value={this.state.displayValue} />
       <View style={Styles.botoes}>
         <Botao label= 'AC' />
         <Botao label= '/' />
@@ -21,8 +28,10 @@ export default function App() {
         <Botao label= '2' />
         <Botao label= '3' />
         <Botao label= '+' />
+        <Botao label= '0' />
+        <Botao label= '.' />
         <Botao label= '=' />
       </View>
     </View>
   );
-}
+}}

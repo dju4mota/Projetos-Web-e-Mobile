@@ -14,12 +14,25 @@ export default Styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: '#fff',
-        alignItems: 'center',
+       // alignItems: 'center',
         justifyContent: 'center',
       },
-      botoes:{
+    botoes:{
         flexDirection: 'row',
         flexWrap: 'wrap',
-      }
+      },
+    display:{
+        flex: 1,
+        padding: 20,
+        justifyContent: 'center',
+        backgroundColor: 'rgba(0,0,0,0.6)',
+        alignItems: 'flex-end'
+    },
+    displayValue:{
+        fontSize: 60,
+        color: '#fff',
+
+    }
+
   });
   
