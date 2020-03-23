@@ -1,24 +1,12 @@
 import React from 'react'
-import {TouchableHighlight,Text,StyleSheet, Dimensions} from 'react-native'
+import {TouchableHighlight,Text} from 'react-native'
+import Styles from '../estilos/Padrao'
 
 export default props => {
     return(
         <TouchableHighlight onPress={props.onClick} > 
-            <Text style={styles.botao}>{props.label}</Text>
+            <Text style={Styles.botao}>{props.label}</Text>
         </TouchableHighlight>
     )
 }
 
-const styles = StyleSheet.create({
-    botao:{
-        fontSize: 40,
-        height: Dimensions.get('window').width /4 ,
-        width: Dimensions.get('window').width /4 ,
-        padding: 20,
-        backgroundColor: '#f0f0f0',
-        textAlign: 'center',
-        borderWidth: 1,
-        borderColor: '#888',
-    }
-  });
-  

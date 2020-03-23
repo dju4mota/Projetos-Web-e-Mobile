@@ -1,11 +1,12 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import Botao from './src/componentes/Botao'
+import { View } from 'react-native';
+import Botao from './componentes/Botao'
+import Styles from './estilos/Padrao'
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <View style={styles.botoes}>
+    <View style={Styles.container}>
+      <View style={Styles.botoes}>
         <Botao label= 'AC' />
         <Botao label= '/' />
         <Botao label= '7' />
@@ -25,16 +26,3 @@ export default function App() {
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  botoes:{
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-  }
-});
