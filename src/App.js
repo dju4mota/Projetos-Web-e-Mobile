@@ -9,28 +9,34 @@ export default class App extends Component {
     displayValue: '0'
   }
 
+  addDigit = n => this.setState({displayValue: n})
+  clearMemory = () => this.setState({displayValue: '0'})
+  setOperation = operation => {
+
+  }
+
   render() {
   return (
     <View style={Styles.container}>
       <Display value={this.state.displayValue} />
       <View style={Styles.botoes}>
-        <Botao label= 'AC' />
-        <Botao label= '/' />
-        <Botao label= '7' />
-        <Botao label= '8' />
-        <Botao label= '9' />
-        <Botao label= '*' />
-        <Botao label= '4' />
-        <Botao label= '5' />
-        <Botao label= '6' />
-        <Botao label= '-' />
-        <Botao label= '1' />
-        <Botao label= '2' />
-        <Botao label= '3' />
-        <Botao label= '+' />
-        <Botao label= '0' />
-        <Botao label= '.' />
-        <Botao label= '=' />
+        <Botao label= 'AC' triple onClick={this.clearMemory}/>
+        <Botao label= '/'  operation onClick={this.setOperation}/>
+        <Botao label= '7' onClick={this.addDigit}/>
+        <Botao label= '8' onClick={this.addDigit}/>
+        <Botao label= '9' onClick={this.addDigit}/>
+        <Botao label= '*' operation onClick={this.setOperation}/>
+        <Botao label= '4' onClick={this.addDigit}/>
+        <Botao label= '5' onClick={this.addDigit}/>
+        <Botao label= '6' onClick={this.addDigit}/>
+        <Botao label= '-' operation onClick={this.setOperation} />
+        <Botao label= '1' onClick={this.addDigit}/>
+        <Botao label= '2' onClick={this.addDigit}/>
+        <Botao label= '3' onClick={this.addDigit}/>
+        <Botao label= '+' operation onClick={this.setOperation}/>
+        <Botao label= '0' double onClick={this.addDigit}/>
+        <Botao label= '.' onClick={this.addDigit}/>
+        <Botao label= '='operation />
       </View>
     </View>
   );

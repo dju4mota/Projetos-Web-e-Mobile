@@ -32,7 +32,18 @@ export default Styles = StyleSheet.create({
         fontSize: 60,
         color: '#fff',
 
+    },
+    opertionButton: {
+        color: '#fff',
+        backgroundColor: '#fa8231'
+    },
+    buttonDouble: {
+        width: (Dimensions.get('window').width /4) *2,        
+    },
+    buttonTriple: {
+        width: (Dimensions.get('window').width /4) *3,        
     }
+
 
   });
   
